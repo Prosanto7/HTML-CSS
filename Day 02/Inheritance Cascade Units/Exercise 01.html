@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 01</title>
+    <style>
+      .parent {
+        color: blue;
+      }
+      span {
+        color: green; /* This will not conflict for the p tag, but will override for the span */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <p>This is some text inside the parent div.</p>
+      <span>This is also text.</span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 08</title>
+    <style>
+      .parent-center {
+        text-align: center;
+      }
+
+      span {
+        text-align: left; /* This rule has no effect on text-align inheritance for span */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent-center">
+      <p>This paragraph should be centered.</p>
+      <div>
+        <span>This span is inside another div.</span>
+      </div>
+    </div>
+  </body>
+</html>
