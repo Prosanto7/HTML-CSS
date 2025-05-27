@@ -1,0 +1,64 @@
+/* class-selector-1.html */
+.highlight {
+    background-color: aquamarine;
+    color: brown;
+    padding: 10px;
+}
+
+/* class-selector-2.html */
+.alert {
+    border: 3px solid red;
+    font-style: italic;
+    text-align: center;
+}
+
+/* class-selector-3.html */
+.completed {
+    text-decoration: line-through;
+    color:grey;
+    opacity: 0.5;
+}
+
+/* class-selector-4.html */
+.btn {
+    background-color: darkslategrey;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.primary {
+    background-color: green;
+}
+
+.danger {
+    background-color: red;
+}
+
+/* class-selector-5.html */
+.card {
+    border: 1px solid blueviolet;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 50%;
+}
+
+.card-title {
+    color:blueviolet;
+    font-size: 1.5em;
+}
+
+.card-description {
+    color: grey;
+    font-size: 1em;
+}
+
+.card-button {
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}

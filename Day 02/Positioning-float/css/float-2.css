@@ -1,0 +1,8 @@
+.sidebar {
+    float: left;
+    margin-right: 10px;
+}
+
+.main-content {
+    overflow: auto;
+}

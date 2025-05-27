@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Table</title>
+    <style>
+        .table-container {
+            display: table;
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            border: 2px solid darkgreen;
+        }
+        .table-row {
+            display: table-row;
+        }
+        .table-cell {
+            display: table-cell;
+            padding: 10px;
+            border: 1px solid lightgray;
+            text-align: center;
+            vertical-align: middle;
+            background-color: lightcyan;
+        }
+        .header-cell {
+            background-color: darkcyan;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display Table Example</h1>
+    <p>Using `display: table;` and related values to create a tabular layout without `&lt;table&gt;` tags:</p>
+
+    <div class="table-container">
+        <div class="table-row">
+            <div class="table-cell header-cell">Header 1</div>
+            <div class="table-cell header-cell">Header 2</div>
+            <div class="table-cell header-cell">Header 3</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Data A1</div>
+            <div class="table-cell">Data A2</div>
+            <div class="table-cell">Data A3</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Data B1</div>
+            <div class="table-cell">Data B2 (longer content to show cell behavior)</div>
+            <div class="table-cell">Data B3</div>
+        </div>
+    </div>
+</body>
+</html>

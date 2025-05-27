@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendant Selector Exercise 2</title>
+    <link rel="stylesheet" href="../css/descendant-2.css">
+</head>
+<body>
+    <h4>Styling Goal: Style only the anchor tags (< a >) that are descendants of the nav element with id="main-nav". They should have no underline, be bold, and change color on hover.</h4>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li>
+                Products
+                <ul>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Books</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <p>Visit our <a href="#">external link</a> for more details.</p>
+</body>
+</html>

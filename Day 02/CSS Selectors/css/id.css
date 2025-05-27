@@ -1,0 +1,51 @@
+/* id-selector-1.html */
+#main-title {
+    font-family: 'Courier New', Courier, monospace;
+    color: darkblue;
+    border-bottom: 2px solid red;
+    width: 50%;
+}
+
+/* id-selector-2.html */
+#cta-button {
+    background-color: green;
+    color: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* id-selector-3.html */
+#main-content {
+    padding: 20px;
+    background-color: lightblue;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 50%;
+}
+
+/* id-selector-4.html */
+#top-navigation {
+    position: sticky;
+    top: 10px;
+    background-color: darkslategray;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+#top-navigation a {
+    color : white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* id-selector-5.html */
+#admin-profile-card{
+    background-color: aqua;
+    border: 5px solid darkblue;
+    padding: 10px;
+    font-size: larger;
+}

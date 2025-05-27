@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5  Features & Advanced Attributes</title>
+  <style>
+    body { font-family: sans-serif; line-height: 1.6; }
+    section { margin-bottom: 2rem; }
+    h2 { border-bottom: 1px solid #ccc; margin-top: 2rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f5f5f5; }
+    select { margin-top: 1rem; padding: 4px; }
+  </style>
+</head>
+<body>
+
+
+
+  <h1>HTML5 Attributes </h1>
+
+  <label for="category">Filter by Category:</label>
+  <select id="category" onchange="filterTable()">
+    <option value="all">All</option>
+    <option value="Global">Global</option>
+    <option value="Form">Form</option>
+    <option value="Media">Media</option>
+    <option value="Link">Link & Script</option>
+    <option value="Meta">Meta & SEO</option>
+    <option value="Image">Image</option>
+    <option value="Table">Table</option>
+    <option value="Anchor">Anchor</option>
+    <option value="Misc">Misc</option>
+  </select>
+
+  <table id="attributes-table">
+    <thead>
+      <tr>
+        <th>Attribute</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>contenteditable</td><td>Global</td></tr>
+      <tr><td>contextmenu</td><td>Global</td></tr>
+      <tr><td>dir</td><td>Global</td></tr>
+      <tr><td>draggable</td><td>Global</td></tr>
+      <tr><td>hidden</td><td>Global</td></tr>
+      <tr><td>lang</td><td>Global</td></tr>
+      <tr><td>spellcheck</td><td>Global</td></tr>
+      <tr><td>tabindex</td><td>Global</td></tr>
+      <tr><td>translate</td><td>Global</td></tr>
+      <tr><td>accesskey</td><td>Global</td></tr>
+      <tr><td>role</td><td>Global</td></tr>
+      <tr><td>data-*</td><td>Global</td></tr>
+      <tr><td>autocomplete</td><td>Form</td></tr>
+      <tr><td>autofocus</td><td>Form</td></tr>
+      <tr><td>form</td><td>Form</td></tr>
+      <tr><td>formaction</td><td>Form</td></tr>
+      <tr><td>formenctype</td><td>Form</td></tr>
+      <tr><td>formmethod</td><td>Form</td></tr>
+      <tr><td>formnovalidate</td><td>Form</td></tr>
+      <tr><td>formtarget</td><td>Form</td></tr>
+      <tr><td>inputmode</td><td>Form</td></tr>
+      <tr><td>multiple</td><td>Form</td></tr>
+      <tr><td>novalidate</td><td>Form</td></tr>
+      <tr><td>pattern</td><td>Form</td></tr>
+      <tr><td>placeholder</td><td>Form</td></tr>
+      <tr><td>readonly</td><td>Form</td></tr>
+      <tr><td>required</td><td>Form</td></tr>
+      <tr><td>step</td><td>Form</td></tr>
+      <tr><td>min</td><td>Form</td></tr>
+      <tr><td>max</td><td>Form</td></tr>
+      <tr><td>accept</td><td>Form</td></tr>
+      <tr><td>capture</td><td>Form</td></tr>
+      <tr><td>list</td><td>Form</td></tr>
+      <tr><td>size</td><td>Form</td></tr>
+      <tr><td>autoplay</td><td>Media</td></tr>
+      <tr><td>controls</td><td>Media</td></tr>
+      <tr><td>loop</td><td>Media</td></tr>
+      <tr><td>muted</td><td>Media</td></tr>
+      <tr><td>preload</td><td>Media</td></tr>
+      <tr><td>src</td><td>Media</td></tr>
+      <tr><td>crossorigin</td><td>Media</td></tr>
+      <tr><td>poster</td><td>Media</td></tr>
+      <tr><td>playsinline</td><td>Media</td></tr>
+      <tr><td>rel</td><td>Link</td></tr>
+      <tr><td>type</td><td>Link</td></tr>
+      <tr><td>media</td><td>Link</td></tr>
+      <tr><td>hreflang</td><td>Link</td></tr>
+      <tr><td>as</td><td>Link</td></tr>
+      <tr><td>referrerpolicy</td><td>Link</td></tr>
+      <tr><td>integrity</td><td>Link</td></tr>
+      <tr><td>charset</td><td>Meta</td></tr>
+      <tr><td>name</td><td>Meta</td></tr>
+      <tr><td>http-equiv</td><td>Meta</td></tr>
+      <tr><td>content</td><td>Meta</td></tr>
+      <tr><td>alt</td><td>Image</td></tr>
+      <tr><td>srcset</td><td>Image</td></tr>
+      <tr><td>sizes</td><td>Image</td></tr>
+      <tr><td>loading</td><td>Image</td></tr>
+      <tr><td>decoding</td><td>Image</td></tr>
+      <tr><td>width</td><td>Image</td></tr>
+      <tr><td>height</td><td>Image</td></tr>
+      <tr><td>scope</td><td>Table</td></tr>
+      <tr><td>colspan</td><td>Table</td></tr>
+      <tr><td>rowspan</td><td>Table</td></tr>
+      <tr><td>headers</td><td>Table</td></tr>
+      <tr><td>abbr</td><td>Table</td></tr>
+      <tr><td>href</td><td>Anchor</td></tr>
+      <tr><td>download</td><td>Anchor</td></tr>
+      <tr><td>target</td><td>Anchor</td></tr>
+      <tr><td>ping</td><td>Anchor</td></tr>
+      <tr><td>referrerpolicy</td><td>Anchor</td></tr>
+      <tr><td>type</td><td>Anchor</td></tr>
+      <tr><td>sandbox</td><td>Misc</td></tr>
+      <tr><td>srcdoc</td><td>Misc</td></tr>
+      <tr><td>seamless</td><td>Misc</td></tr>
+      <tr><td>allow</td><td>Misc</td></tr>
+      <tr><td>allowfullscreen</td><td>Misc</td></tr>
+      <tr><td>itemprop</td><td>Misc</td></tr>
+      <tr><td>itemscope</td><td>Misc</td></tr>
+      <tr><td>itemtype</td><td>Misc</td></tr>
+      <tr><td>itemid</td><td>Misc</td></tr>
+      <tr><td>aria-*</td><td>Misc</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    function filterTable() {
+      const selected = document.getElementById('category').value;
+      const rows = document.querySelectorAll('#attributes-table tbody tr');
+      rows.forEach(row => {
+        const category = row.children[1].textContent;
+        row.style.display = (selected === 'all' || selected === category) ? '' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>

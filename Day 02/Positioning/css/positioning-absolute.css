@@ -1,0 +1,10 @@
+.product-card{
+    position: relative;
+}
+
+.new-badge {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    color: red;
+}

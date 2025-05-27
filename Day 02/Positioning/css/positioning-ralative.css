@@ -1,0 +1,12 @@
+.relative-box {
+    position: relative;
+    left: 20px;
+    background-color: lightgrey;
+}
+
+.absolute-child{
+    position: absolute;
+    top: 5px;
+    left: 35%;
+    background-color: lightcoral;
+}

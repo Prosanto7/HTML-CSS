@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendant Selector Exercise 5</title>
+    <link rel="stylesheet" href="../css/descendant-5.css">
+</head>
+<body>
+    <h4>Styling Goal: Style only the list items (< li >) that are part of an ordered list (< ol >) which is a descendant of the aside element with id="sidebar". They should have a specific list style, text color, and font weight.</h4>
+    <div class="main-layout">
+        <aside id="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li>Category A</li>
+                <li>Category B</li>
+                <li>Category C</li>
+            </ul>
+            <h3>Important Links</h3>
+            <ol>
+                <li><a href="#">Link One</a></li>
+                <li><a href="#">Link Two</a></li>
+                <li><a href="#">Link Three</a></li>
+            </ol>
+        </aside>
+        <main>
+            <h2>Page Content</h2>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Inline</title>
+    <style>
+        .inline-element {
+            background-color: lightblue;
+            padding: 10px; /* Padding affects inline elements, but not width/height */
+            margin: 5px;  /* Margin only affects horizontal space */
+            border: 1px solid blue;
+            width: 150px; /* This will have no effect on inline elements */
+            height: 50px; /* This will have no effect on inline elements */
+        }
+    </style>
+</head>
+<body>
+    <h1>Inline Element Example</h1>
+    <p>
+        This is some text with an
+        <span class="inline-element">inline span element</span>
+        right here. Notice how it
+        <span class="inline-element">flows with the text</span>
+        and does not start on a new line.
+    </p>
+</body>
+</html>

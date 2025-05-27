@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Sticky Exercise</title>
+    <link rel="stylesheet" href="../css/positioning-sticky.css">
+</head>
+<body>
+    <h4>Styling Goal: Make a section header stick to the top of the viewport when it reaches that position during scrolling, then unstick when its parent container scrolls out of view.</h4>
+    <div class="scroll-container">
+        <p>This content is before the sticky header.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="section">
+            <h2 class="sticky-header">Section A: Core Concepts</h2>
+            <p>Content for Section A. This section has enough text to make the header sticky when scrolled.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>More content for Section A.</p>
+            <p>Even more content for Section A.</p>
+        </div>
+        <div class="section">
+            <h2 class="sticky-header">Section B: Advanced Topics</h2>
+            <p>Content for Section B. This header should also become sticky.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           <p>Final content for Section B.</p>
+        </div>
+        <p>This content is after the sticky sections.</p>
+        <p style="height: 1000px; background-color: #e0e0e0;">More scrollable content to ensure sticky behavior is visible.</p>
+    </div>
+</body>
+</html>

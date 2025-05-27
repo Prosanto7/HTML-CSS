@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Relative Exercise</title>
+    <link rel="stylesheet" href="../css/positioning-ralative.css">
+</head>
+<body>
+    <h4>Styling Goal: Shift an element slightly from its normal position without affecting the layout of surrounding elements, and establish it as a positioning context for potential absolute children.</h4>
+    <div class="flow-element">
+        This element is in the normal flow.
+    </div>
+    <div class="relative-box">
+        I am a relatively positioned box. I will shift from my original spot.
+        <span class="absolute-child">I am an absolute child.</span>
+    </div>
+    <div class="flow-element">
+        This element is also in the normal flow and will *not* move to fill the gap left by the relative box.
+    </div>
+</body>
+</html>

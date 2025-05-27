@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Selector Exercise 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h4>Styling Goal: Make only the direct list items (< li >) of the unordered list (< ul >) with id="main-list" bold, give them a specific background, and add a small bottom margin.</h4>
+    <ul id="main-list">
+        <li>Item One (Direct Child)</li>
+        <li>Item Two (Direct Child)
+            <ul>
+                <li>Sub-item A (Not a direct child of #main-list)</li>
+                <li>Sub-item B (Not a direct child of #main-list)</li>
+            </ul>
+        </li>
+        <li>Item Three (Direct Child)</li>
+    </ul>
+    <ul>
+        <li>Another list item outside #main-list.</li>
+    </ul>
+</body>
+</html>
