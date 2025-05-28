@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First-child Exercise 2</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h4>Styling Goal: Apply a distinct text color, a larger font size, and a solid right border to only the first list item (< li >) that is the first child of its parent unordered list (< ul >).</h4>
+    <nav id="main-menu">
+        <ul>
+            <li>Home (Should be styled)</li>
+            <li>About Us</li>
+            <li>Services
+                <ul>
+                    <li>Web Design (First child of nested ul, but not main-menu ul)</li>
+                    <li>SEO</li>
+                </ul>
+            </li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <ul>
+        <li>Another list's first item (Should also be styled, as it's the first child of its ul)</li>
+        <li>Second item</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+@import "variables";
+@import "functions";
+
+#article-content > p:first-of-type {
+  background-color: $background-color;
+  font-weight: get-font-weight(bold);
+}
+
+#main-menu > ul > li:first-child {
+  color: $text-color-dark;
+  font-size: get-font-size(x-large)
+}
+
+#user-registration > input:first-child {
+  background-color: $background-color;
+  border: get-border(thick);
+  font-weight: get-font-weight(bold);
+  padding: get-padding(medium);
+}

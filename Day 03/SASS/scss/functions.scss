@@ -1,0 +1,33 @@
+@import "variables.scss";
+
+@function get-font-weight($weight) {
+  @if map-has-key($font-weight, $weight) {
+    @return map-get($font-weight, $weight);
+  } @else {
+    @error "Font weight '#{$weight}' not found in the font-weight map.";
+  }
+}
+
+@function get-font-size($size) {
+  @if map-has-key($font-size, $size) {
+    @return map-get($font-size, $size);
+  } @else {
+    @error "Font size '#{$size}' not found in the font-size map.";
+  }
+}
+
+@function get-border($thickness) {
+  @if map-has-key($border, $thickness) {
+    @return map-get($border, $thickness);
+  } @else {
+    @error "Border thickness '#{$thickness}' not found in the border map.";
+  }
+}
+
+@function get-padding($size) {
+  @if map-has-key($padding, $size) {
+    @return map-get($padding, $size);
+  } @else {
+    @error "Padding size '#{$size}' not found in the padding map.";
+  }
+}

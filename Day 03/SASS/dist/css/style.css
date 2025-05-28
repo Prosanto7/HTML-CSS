@@ -1,0 +1,16 @@
+#article-content > p:first-of-type {
+  background-color: lightblue;
+  font-weight: 700;
+}
+
+#main-menu > ul > li:first-child {
+  color: darkblue;
+  font-size: 24px;
+}
+
+#user-registration > input:first-child {
+  background-color: lightblue;
+  border: 3px solid black;
+  font-weight: 700;
+  padding: 10px;
+}/*# sourceMappingURL=style.css.map */

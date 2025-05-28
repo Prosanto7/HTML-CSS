@@ -1,30 +1,35 @@
-$primary-color: #114e77;
-$secondary-color: #2ecc71;
-$tertiary-color: #f1c40f;
-$background-color: #f8f9fa;
-$hover-color: #3498db;
-$text-color: #ffffff;
+$background-color: lightblue;
+$text-color-dark: darkblue;
 
-$font-weights: (
+$border: (
+  thin: 1px solid darkgray,
+  medium: 2px solid gray,
+  thick: 3px solid black
+);
+
+$font-weight: (
+  thin: 100,
+  extra-light: 200,
   light: 300,
-  regular: 400,
+  normal: 400,
   medium: 500,
-  semibold: 600,
+  semi-bold: 600,
   bold: 700,
-);
-$font-sizes: (
-  small: 12px,
-  regular: 16px,
-  large: 20px,
-  xlarge: 24px,
+  extra-bold: 800,
+  ultra-bold: 900
 );
 
-$mobile: (
-  width: 100%,
-  padding: 20px,
+$font-size: (
+  small: 12px,
+  medium: 16px,
+  large: 20px,
+  x-large: 24px,
+  xx-large: 28px
 );
-$breakpoints: (
-  mobile: 768px,
-  tablet: 1024px,
-  desktop: 1200px,
+
+$padding: (
+  small: 5px,
+  medium: 10px,
+  large: 15px,
+  x-large: 20px
 );

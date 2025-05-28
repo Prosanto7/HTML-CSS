@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last-child Exercise 2</title>
+    <link rel="stylesheet" href="../css/last-child-2.css">
+</head>
+<body>
+    <h4>Styling Goal: Apply a distinct background color, bold font weight, and a dashed bottom border to only the first paragraph (< p >) that is the first child of its parent element.</h4>
+    <footer id="page-footer">
+        <h3>Quick Links</h3>
+        <ul>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+            <li>FAQ</li>
+            <li>Contact Us (Should be styled)</li>
+        </ul>
+        <div>
+            <ul>
+                <li>Nested Link 1</li>
+                <li>Nested Link 2 (Last child of nested ul, but not main footer ul)</li>
+            </ul>
+        </div>
+    </footer>
+    <ul>
+        <li>Another list item</li>
+        <li>Final item in another list (Should also be styled, as it's the last child of its ul)</li>
+    </ul>
+</body>
+</html>
