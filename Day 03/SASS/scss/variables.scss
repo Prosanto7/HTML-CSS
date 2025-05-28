@@ -1,0 +1,30 @@
+$primary-color: #114e77;
+$secondary-color: #2ecc71;
+$tertiary-color: #f1c40f;
+$background-color: #f8f9fa;
+$hover-color: #3498db;
+$text-color: #ffffff;
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+);
+$font-sizes: (
+  small: 12px,
+  regular: 16px,
+  large: 20px,
+  xlarge: 24px,
+);
+
+$mobile: (
+  width: 100%,
+  padding: 20px,
+);
+$breakpoints: (
+  mobile: 768px,
+  tablet: 1024px,
+  desktop: 1200px,
+);

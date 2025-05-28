@@ -1,0 +1,8 @@
+Exercise 12: Ecommerce Site - 3 Column Product Listing 🛍️
+
+    Goal: Create a responsive 3-column layout for product cards, similar to an ecommerce category page
+
+    Visual Change: You'll see a basic webpage structure with a header, a navigation/filter bar, a footer, and a main content area. The main content area (product-grid) will display product cards.
+
+    On wider screens, these product cards will arrange themselves into multiple columns (e.g., 3 or 4 columns if space allows, each at least 250px wide).
+    On narrower screens (try resizing your browser), the number of columns will decrease, eventually becoming a single column of products if the screen is very narrow. This demonstrates a responsive product listing. Each card will contain an image, title, description, and button.

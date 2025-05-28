@@ -1,0 +1,5 @@
+Exercise 9: Using minmax() for Responsive Sizing ↔️
+
+    Goal: Create columns that have a minimum size but can grow.
+
+    Visual Change: The items will try to fit on a single row. Each item will be at least 150px wide. If the container is wide enough, they will share the space equally (due to 1fr). If the container is narrow, items will wrap to the next line, maintaining their minimum 150px width. Try resizing the browser window or the container width to observe this.

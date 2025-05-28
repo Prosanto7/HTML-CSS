@@ -1,0 +1,5 @@
+Exercise 2: Adding Gaps Between Items 📐
+
+    Goal: Introduce space between grid items.
+
+Visual Change: Similar to Exercise 1, but now there will be a 10px space horizontally between the columns (item 1 and 2, item 2 and 3) and vertically between the rows (item 1 and 4, item 2 and 5, item 3 and 6). The items will appear slightly smaller due to the gap.

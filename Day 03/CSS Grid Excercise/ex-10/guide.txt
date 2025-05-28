@@ -1,0 +1,5 @@
+Exercise 10: Aligning Items within their Cells ( justify-items & align-items) 🎯
+
+    Goal: Control the alignment of all items within their respective grid cells.
+
+    Visual Change: The grid cells will be 150px wide and 100px tall. Within each cell, the content (A, B, C, D) will be aligned to the right end (due to justify-items: end;) and vertically centered (due to align-items: center;).

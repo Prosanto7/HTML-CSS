@@ -1,0 +1,5 @@
+Exercise 1: Your First Grid perustiedot
+
+Goal: Create a simple 3-column grid.
+
+Visual Change: You should see a container with a light gray background. Inside, six blue items will be arranged into two rows and three columns. Each column will be 100px wide. Items 1, 2, 3 will be in the first row, and 4, 5, 6 in the second.

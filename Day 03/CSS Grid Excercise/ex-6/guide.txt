@@ -1,0 +1,5 @@
+Exercise 6: Spanning Rows ↕️
+
+    Goal: Make an item span across multiple rows.
+
+    Visual Change: "Item A" will be in the first column and will span vertically across the first and second rows (total height 120px + gap). "Item B" will be in the second column of the first row. "Item C" will be in the second column of the second row. "Item D" will start on the next available row (implicitly created).

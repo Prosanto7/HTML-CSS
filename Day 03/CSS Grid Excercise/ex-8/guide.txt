@@ -1,0 +1,10 @@
+Exercise 8: Naming Grid Areas 🗺️
+
+    Goal: Define a layout using named grid areas.
+
+    Visual Change: You'll see a common webpage layout:
+
+    - The "Header" will span across the top two columns.
+    - The "Sidebar" will be in the first column of the second row.
+    - The "Content" will be in the second column of the second row (wider than the sidebar).
+    - The "Footer" will span across the bottom two columns.

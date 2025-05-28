@@ -1,0 +1,63 @@
+@import "variables";
+
+@function font-weight($key) {
+  @return map-get($map: $font-weights, $key: $key);
+}
+
+@function breakpoint($key) {
+  @return map-get($map: $breakpoints, $key: $key);
+}
+
+@mixin flex-center ($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin theme ($light-theme : true) {
+  @if $light-theme {
+    background-color: $primary-color;
+  } @else {
+    background-color: $secondary-color;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: breakpoint(mobile)) {
+    @content;
+  }
+}
+
+body {
+  color: $text-color;
+  font-weight: font-weight(regular);
+}
+
+.main {
+  @include flex-center(row);
+  margin: 0 auto;
+  text-align: center;
+  width: 100% - 25%;
+
+  .paragraph {
+    font-size: map-get($map: $font-sizes, $key: xlarge);
+
+    &:hover {
+      color: $hover-color;
+    }
+  } 
+
+  .paragraph_extended {
+    @extend .paragraph;
+    color: $tertiary-color;
+  }
+
+  @include mobile {
+    flex-direction: column
+  }
+}
+
+.theme {
+  @include theme(true);
+}

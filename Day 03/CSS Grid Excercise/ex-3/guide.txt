@@ -1,0 +1,5 @@
+Exercise 3: Using Fractional Units (fr) for Flexible Columns 📏
+
+    Goal: Create columns that share available space proportionally.
+
+Visual Change: You'll see three items in a single row. The middle item (2) will be twice as wide as the first (1) and third (3) items. They will collectively fill the 600px width of the container, minus the gaps.

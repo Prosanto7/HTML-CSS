@@ -1,0 +1,5 @@
+Exercise 7: Naming Grid Lines 🏷️
+
+    Goal: Define names for grid lines and use them for item placement.
+
+    Visual Change: The "Special" item will start at the line named col2-start and end at col3-end, effectively spanning the second and third columns. It will be in the first row (starting at row1-start). Items 1, 2, and 3 will fill the remaining available cells.

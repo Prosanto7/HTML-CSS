@@ -1,0 +1,5 @@
+Exercise 11: Aligning Individual Items ( justify-self & align-self) 🧍
+
+    Goal: Override the default alignment for specific items.
+
+    Visual Change: All items (A, C, D) will be aligned to the top-left corner of their cells. However, "Item B (Special)" will be aligned to the right side and vertically centered within its own grid cell, overriding the container's justify-items and align-items properties.

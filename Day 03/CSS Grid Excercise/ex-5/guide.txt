@@ -1,0 +1,5 @@
+Exercise 5: Spanning Columns 🌉
+
+    Goal: Make an item span across multiple columns.
+
+    Visual Change: You'll see "Item 1" occupying the space of the first two columns in the first row. "Item 2" will be in the third column of the first row. "Item 3" and "Item 4" will appear on the next row, each in their respective columns (unless the grid runs out of columns defined by grid-template-columns, then item 4 would wrap).

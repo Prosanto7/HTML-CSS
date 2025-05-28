@@ -1,0 +1,32 @@
+body {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  text-align: center;
+  width: 75%;
+}
+.main .paragraph, .main .paragraph_extended {
+  font-size: 24px;
+}
+.main .paragraph:hover, .main .paragraph_extended:hover {
+  color: #3498db;
+}
+.main .paragraph_extended {
+  color: #f1c40f;
+}
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
+.theme {
+  background-color: #114e77;
+}/*# sourceMappingURL=main.css.map */

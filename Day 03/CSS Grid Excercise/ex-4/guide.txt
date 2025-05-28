@@ -1,0 +1,6 @@
+Exercise 4: Defining Explicit Rows & Using repeat() 🔄
+
+    Goal: Define specific row heights and use the repeat() function for concise column/row definitions.
+
+
+Visual Change: The six items will be arranged in a 3-column, 2-row grid. All columns will have equal width. The items in the first row (A, B, C) will be 50px tall, and the items in the second row (D, E, F) will be 100px tall.
