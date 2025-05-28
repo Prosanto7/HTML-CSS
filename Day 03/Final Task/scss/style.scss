@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'functions';
+@import 'mixins';
+
+// Page Centric: Here Page prefixed used to represent particular page styles.
+.page__progress-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+// Component Centric: Here each component can be treated as reusable component.
+.page__progress-label {
+    font-weight: font-weight(semibold);
+    color: $primary-color;
+}
+
+// block_element: It represents the block and element of BEM methodology.
+.page__progress-digit {
+    @include progress-digit;
+}
+
+// block_element--modifier: It represents the block, element and modifier of BEM methodology with modifier.
+.page__progress-digit--active {
+    @include progress-digit;
+    background-color: $background-color;
+}

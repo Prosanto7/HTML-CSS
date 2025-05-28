@@ -1,0 +1,9 @@
+@import 'variables';
+
+@function font-weight($key) {
+  @return map-get($map: $font-weights, $key: $key);
+}
+
+@function breakpoint($key) {
+  @return map-get($map: $breakpoints, $key: $key);
+}

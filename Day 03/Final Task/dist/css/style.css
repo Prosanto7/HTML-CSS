@@ -1,0 +1,27 @@
+.page__progress-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.page__progress-label {
+  font-weight: 600;
+  color: #114e77;
+}
+
+.page__progress-digit {
+  padding: 20px;
+  background-color: grey;
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.page__progress-digit--active {
+  padding: 20px;
+  background-color: grey;
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+  background-color: #aabcce;
+}/*# sourceMappingURL=style.css.map */

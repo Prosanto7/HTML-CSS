@@ -6,6 +6,8 @@
     <title>Complex Layout Design</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body class="flex min-h-screen bg-gray-100">
 
@@ -64,7 +66,7 @@
         </nav>
     </aside>
 
-    <div class="flex-1 flex flex-col md:ml-64"> <header class="bg-white shadow-sm py-4 px-6 flex items-center justify-between sticky top-0 z-30">
+    <div class="flex-1 flex flex-col"> <header class="bg-white shadow-sm py-4 px-6 flex items-center justify-between sticky top-0 z-30">
             <h2 class="text-xl font-semibold text-gray-800">Overview</h2>
             <div class="flex items-center space-x-4">
                 <button class="text-gray-600 hover:text-blue-600">
@@ -140,21 +142,18 @@
             <section class="bg-white rounded-lg shadow-md p-6 mb-8">
                 <h2 class="text-2xl font-bold text-gray-800 mb-6">New Project Setup</h2>
 
-                <div class="flex justify-between items-center relative mb-8">
-                    <div class="progress-bar">
-                        <div id="progress-bar-fill" class="progress-bar-fill w-0"></div>
+                <div class="page__progress-container">
+                    <div id="step-1-indicator">
+                        <div class="page__progress-digit--active">1</div>
+                        <span class="page__progress-label">Project Info</span>
                     </div>
-                    <div id="step-1-indicator" class="progress-step active">
-                        <div class="progress-dot bg-blue-600">1</div>
-                        <span class="progress-label text-sm text-blue-600">Project Info</span>
+                    <div id="step-2-indicator">
+                        <div class="page__progress-digit">2</div>
+                        <span class="page__progress-label">Team & Budget</span>
                     </div>
-                    <div id="step-2-indicator" class="progress-step">
-                        <div class="progress-dot bg-gray-400">2</div>
-                        <span class="progress-label text-sm text-gray-500">Team & Budget</span>
-                    </div>
-                    <div id="step-3-indicator" class="progress-step">
-                        <div class="progress-dot bg-gray-400">3</div>
-                        <span class="progress-label text-sm text-gray-500">Review & Confirm</span>
+                    <div id="step-3-indicator">
+                        <div class="page__progress-digit">3</div>
+                        <span class="page__progress-label">Review & Confirm</span>
                     </div>
                 </div>
 
