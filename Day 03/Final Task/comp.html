@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Layout Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="flex min-h-screen bg-gray-100">
+
+    <button id="mobile-sidebar-toggle" class="md:hidden fixed top-4 left-4 z-50 p-2 bg-blue-600 text-white rounded-full shadow-lg">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+
+    <aside id="sidebar" class="sidebar hidden-mobile fixed inset-y-0 left-0 w-64 bg-gray-800 text-white shadow-lg z-40 md:relative md:translate-x-0">
+        <div class="p-6 border-b border-gray-700">
+            <h1 class="text-2xl font-bold text-blue-400">Dashboard</h1>
+        </div>
+        <nav class="mt-6">
+            <ul>
+                <li>
+                    <a href="#" class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition duration-200 rounded-lg mx-3 active-link">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m0 0l7 7m-2 2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        Home
+                    </a>
+                </li>
+                <li class="relative">
+                    <button class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition duration-200 focus:outline-none rounded-lg mx-3" onclick="toggleDropdown(this)">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m7 0V5a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6"></path></svg>
+                            Products
+                        </span>
+                        <svg class="w-4 h-4 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                    <ul class="dropdown-menu hidden bg-gray-700 py-2 rounded-lg mx-3 mt-1">
+                        <li><a href="#" class="block px-8 py-2 text-gray-300 hover:bg-gray-600 hover:text-white transition duration-200 rounded-lg">All Products</a></li>
+                        <li><a href="#" class="block px-8 py-2 text-gray-300 hover:bg-gray-600 hover:text-white transition duration-200 rounded-lg">Add New</a></li>
+                        <li><a href="#" class="block px-8 py-2 text-gray-300 hover:bg-gray-600 hover:text-white transition duration-200 rounded-lg">Categories</a></li>
+                    </ul>
+                </li>
+                <li class="relative">
+                    <button class="flex items-center justify-between w-full px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition duration-200 focus:outline-none rounded-lg mx-3" onclick="toggleDropdown(this)">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2m2-9a4 4 0 118 0m-4 0a4 4 0 108 0M12 18H8m-2 0H2"></path></svg>
+                            Users
+                        </span>
+                        <svg class="w-4 h-4 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                    <ul class="dropdown-menu hidden bg-gray-700 py-2 rounded-lg mx-3 mt-1">
+                        <li><a href="#" class="block px-8 py-2 text-gray-300 hover:bg-gray-600 hover:text-white transition duration-200 rounded-lg">All Users</a></li>
+                        <li><a href="#" class="block px-8 py-2 text-gray-300 hover:bg-gray-600 hover:text-white transition duration-200 rounded-lg">Roles</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition duration-200 rounded-lg mx-3">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="flex-1 flex flex-col md:ml-64"> <header class="bg-white shadow-sm py-4 px-6 flex items-center justify-between sticky top-0 z-30">
+            <h2 class="text-xl font-semibold text-gray-800">Overview</h2>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-600 hover:text-blue-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                </button>
+                <div class="flex items-center space-x-2">
+                    <img src="https://placehold.co/32x32/cccccc/333333?text=AV" alt="User Avatar" class="w-8 h-8 rounded-full">
+                    <span class="text-gray-700 text-sm font-medium hidden sm:block">John Doe</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="p-6 flex-grow">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Total Sales</h3>
+                        <div class="p-2 bg-blue-100 text-blue-600 rounded-full">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V9m0 3v2m0 3v2M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-4xl font-bold text-gray-900 mb-2">$12,450</p>
+                    <p class="text-sm text-green-600 flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8L11 17M3 21v-4m0 0V5a2 2 0 012-2h6.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V21m-13-6h16"></path></svg>
+                        +5.2% this month
+                    </p>
+                    <button class="mt-4 text-blue-600 hover:underline text-sm font-medium self-start">View Report</button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold text-gray-800">New Users</h3>
+                        <div class="p-2 bg-purple-100 text-purple-600 rounded-full">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM12 14c-1.49 0-2.92.57-4 1.57V19a2 2 0 002 2h8a2 2 0 002-2v-3.43c-1.08-1-2.51-1.57-4-1.57z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-4xl font-bold text-gray-900 mb-2">87</p>
+                    <p class="text-sm text-red-600 flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8L11 7M3 3v4m0 0V19a2 2 0 002 2h6.586a1 1 0 00.707-.293l4.414-4.414a1 1 0 00.293-.707V3m-13 6h16"></path></svg>
+                        -1.8% from last week
+                    </p>
+                    <button class="mt-4 text-blue-600 hover:underline text-sm font-medium self-start">Manage Users</button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Orders Pending</h3>
+                        <div class="p-2 bg-yellow-100 text-yellow-600 rounded-full">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-4xl font-bold text-gray-900 mb-2">15</p>
+                    <p class="text-sm text-gray-500">Awaiting fulfillment</p>
+                    <button class="mt-4 text-blue-600 hover:underline text-sm font-medium self-start">View Orders</button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+                    <img src="https://placehold.co/96x96/a0c4ff/ffffff?text=PROFILE" alt="Profile Image" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-blue-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Jane Doe</h3>
+                    <p class="text-gray-600 text-sm mb-3">Senior Designer</p>
+                    <div class="flex space-x-2 mb-4">
+                        <span class="bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Active</span>
+                        <span class="bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Premium</span>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">"Creative mind with a passion for user-centric design."</p>
+                    <div class="flex space-x-3">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md font-medium text-sm hover:bg-blue-700 transition duration-300">View Profile</button>
+                        <button class="border border-gray-300 text-gray-700 px-4 py-2 rounded-md font-medium text-sm hover:bg-gray-50 transition duration-300">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">New Project Setup</h2>
+
+                <div class="flex justify-between items-center relative mb-8">
+                    <div class="progress-bar">
+                        <div id="progress-bar-fill" class="progress-bar-fill w-0"></div>
+                    </div>
+                    <div id="step-1-indicator" class="progress-step active">
+                        <div class="progress-dot bg-blue-600">1</div>
+                        <span class="progress-label text-sm text-blue-600">Project Info</span>
+                    </div>
+                    <div id="step-2-indicator" class="progress-step">
+                        <div class="progress-dot bg-gray-400">2</div>
+                        <span class="progress-label text-sm text-gray-500">Team & Budget</span>
+                    </div>
+                    <div id="step-3-indicator" class="progress-step">
+                        <div class="progress-dot bg-gray-400">3</div>
+                        <span class="progress-label text-sm text-gray-500">Review & Confirm</span>
+                    </div>
+                </div>
+
+                <form id="multi-step-form">
+                    <div id="step-1" class="form-step">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-4">Step 1: Project Information</h3>
+                        <div class="mb-4">
+                            <label for="projectName" class="block text-gray-700 text-sm font-bold mb-2">Project Name:</label>
+                            <input type="text" id="projectName" name="projectName" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., Website Redesign" required>
+                            <p id="projectName-error" class="text-red-500 text-xs italic mt-1 hidden">Project Name is required.</p>
+                        </div>
+                        <div class="mb-6">
+                            <label for="projectDescription" class="block text-gray-700 text-sm font-bold mb-2">Project Description:</label>
+                            <textarea id="projectDescription" name="projectDescription" rows="4" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Briefly describe the project goals..." required></textarea>
+                            <p id="projectDescription-error" class="text-red-500 text-xs italic mt-1 hidden">Project Description is required.</p>
+                        </div>
+                        <div class="flex justify-end">
+                            <button type="button" onclick="nextStep()" class="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300">Next</button>
+                        </div>
+                    </div>
+
+                    <div id="step-2" class="form-step hidden">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-4">Step 2: Team & Budget</h3>
+                        <div class="mb-4">
+                            <label for="teamMembers" class="block text-gray-700 text-sm font-bold mb-2">Number of Team Members:</label>
+                            <input type="number" id="teamMembers" name="teamMembers" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" min="1" value="1" required>
+                            <p id="teamMembers-error" class="text-red-500 text-xs italic mt-1 hidden">Please enter a valid number of team members (at least 1).</p>
+                        </div>
+                        <div class="mb-6">
+                            <label for="budget" class="block text-gray-700 text-sm font-bold mb-2">Estimated Budget ($):</label>
+                            <input type="number" id="budget" name="budget" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" min="0" step="100" value="1000" required>
+                            <p id="budget-error" class="text-red-500 text-xs italic mt-1 hidden">Please enter a valid budget (non-negative).</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <button type="button" onclick="prevStep()" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-50 transition duration-300">Previous</button>
+                            <button type="button" onclick="nextStep()" class="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300">Next</button>
+                        </div>
+                    </div>
+
+                    <div id="step-3" class="form-step hidden">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-4">Step 3: Review & Confirm</h3>
+                        <div class="mb-6 bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <p class="text-gray-800 mb-2"><span class="font-semibold">Project Name:</span> <span id="reviewProjectName"></span></p>
+                            <p class="text-gray-800 mb-2"><span class="font-semibold">Description:</span> <span id="reviewProjectDescription"></span></p>
+                            <p class="text-gray-800 mb-2"><span class="font-semibold">Team Members:</span> <span id="reviewTeamMembers"></span></p>
+                            <p class="text-gray-800"><span class="font-semibold">Estimated Budget:</span> $<span id="reviewBudget"></span></p>
+                        </div>
+                        <div class="flex justify-between">
+                            <button type="button" onclick="prevStep()" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-50 transition duration-300">Previous</button>
+                            <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition duration-300">Submit Project</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
