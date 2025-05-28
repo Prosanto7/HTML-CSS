@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Your News Daily - Homepage (Component Centric)</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* Base Styles */
+
+    *,
+    *::before,
+    *::after {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+
+    body {
+
+      font-family: 'Inter', sans-serif;
+
+      background-color: #f3f4f6;
+      /* Light gray background */
+
+      line-height: 1.6;
+
+      color: #333;
+
+      -webkit-font-smoothing: antialiased;
+
+      -moz-osx-font-smoothing: grayscale;
+
+    }
+
+
+    a {
+
+      text-decoration: none;
+
+      color: inherit;
+
+    }
+
+
+    /* Layout Container */
+
+    .l-container {
+
+      max-width: 1200px;
+
+      margin: 0 auto;
+
+      padding: 1rem;
+
+    }
+
+
+    /* Component: Main Navigation (c-main-nav) */
+
+    .c-main-nav {
+
+      background-color: #ffffff;
+
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      padding: 1rem 0;
+
+      position: fixed;
+
+      width: 100%;
+
+      z-index: 10;
+
+      top: 0;
+
+    }
+
+
+    .c-main-nav>.l-container {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+    }
+
+
+    .c-main-nav__logo {
+
+      font-size: 1.5rem;
+
+      font-weight: 800;
+
+      color: #1a202c;
+
+      padding: 0.5rem 0.75rem;
+
+      border-radius: 0.375rem;
+
+      transition: background-color 0.2s ease-in-out;
+
+    }
+
+
+    .c-main-nav__logo:hover {
+
+      background-color: #f7f7f7;
+
+    }
+
+
+    .c-main-nav__links {
+
+      display: none;
+      /* Hidden by default on mobile */
+
+      gap: 1.5rem;
+
+    }
+
+
+    .c-main-nav__link {
+
+      color: #4a5568;
+
+      font-weight: 500;
+
+      padding: 0.5rem 0.75rem;
+
+      border-radius: 0.375rem;
+
+      transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+    }
+
+
+    .c-main-nav__link:hover {
+
+      color: #2563eb;
+
+      background-color: #f7f7f7;
+
+    }
+
+
+    .c-mobile-menu-button {
+
+      display: block;
+      /* Visible by default on mobile */
+
+      color: #4a5568;
+
+      transition: color 0.2s ease-in-out;
+
+    }
+
+
+    .c-mobile-menu-button:focus {
+
+      outline: none;
+
+      color: #2563eb;
+
+    }
+
+
+    /* Layout: Main Content Area (l-main-content) */
+
+    .l-main-content {
+
+      margin-top: 6rem;
+
+      padding: 1rem;
+
+    }
+
+
+    .l-main-content>.l-container {
+
+      display: flex;
+
+      flex-direction: column;
+      /* Stacked vertically on mobile */
+
+      gap: 2rem;
+
+    }
+
+
+    .l-main-content__left {
+
+      flex: 1;
+
+    }
+
+
+    .l-main-content__right {
+
+      flex-shrink: 0;
+
+    }
+
+
+    /* Component: Hero Banner (c-hero-banner) */
+
+    .c-hero-banner {
+
+      background-color: #ffffff;
+
+      padding: 1.5rem;
+
+      border-radius: 0.75rem;
+
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      margin-bottom: 2rem;
+
+    }
+
+
+    .c-hero-banner__title {
+
+      font-size: 2.25rem;
+
+      line-height: 1.25;
+
+      font-weight: 700;
+
+      color: #1a202c;
+
+      margin-bottom: 1rem;
+
+    }
+
+
+    .c-hero-banner__title a:hover {
+
+      color: #1d4ed8;
+
+    }
+
+
+    .c-hero-banner__image {
+
+      width: 100%;
+
+      height: auto;
+
+      border-radius: 0.5rem;
+
+      margin-bottom: 1rem;
+
+      object-fit: cover;
+
+    }
+
+
+    .c-hero-banner__description {
+
+      color: #4a5568;
+
+      font-size: 1.125rem;
+
+      line-height: 1.75;
+
+    }
+
+
+    .c-hero-banner__read-more {
+
+      display: inline-block;
+
+      margin-top: 1rem;
+
+      color: #2563eb;
+
+      font-weight: 600;
+
+      transition: color 0.2s ease-in-out;
+
+    }
+
+
+    .c-hero-banner__read-more:hover {
+
+      color: #1e40af;
+
+    }
+
+
+    /* Component: Category Grid (c-category-grid) */
+
+    .c-category-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr;
+      /* Single column on mobile */
+
+      gap: 1.5rem;
+
+    }
+
+
+    /* Component: Category Block (c-category-block) */
+
+    .c-category-block {
+
+      background-color: #ffffff;
+
+      padding: 1.5rem;
+
+      border-radius: 0.75rem;
+
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+    .c-category-block__title {
+
+      font-size: 1.5rem;
+
+      font-weight: 700;
+
+      color: #1a202c;
+
+      margin-bottom: 1rem;
+
+      padding-bottom: 0.5rem;
+
+      border-bottom: 1px solid #e2e8f0;
+
+    }
+
+
+    .c-category-block__title a:hover {
+
+      color: #2563eb;
+
+    }
+
+
+    .c-category-block__more {
+
+      display: inline-block;
+
+      margin-top: 0.5rem;
+
+      color: #2563eb;
+
+      font-weight: 600;
+
+      transition: color 0.2s ease-in-out;
+
+    }
+
+
+    .c-category-block__more:hover {
+
+      color: #1e40af;
+
+    }
+
+
+    /* Component: Article Item (c-article-item) */
+
+    .c-article-item {
+
+      margin-bottom: 1rem;
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 1rem;
+
+    }
+
+
+    .c-article-item__image {
+
+      width: 6rem;
+
+      height: 4rem;
+
+      object-fit: cover;
+
+      border-radius: 0.375rem;
+
+      flex-shrink: 0;
+
+    }
+
+
+    .c-article-item__content h4 {
+
+      font-size: 1.125rem;
+
+      font-weight: 600;
+
+      color: #2d3748;
+
+      line-height: 1.375;
+
+      margin-bottom: 0.25rem;
+
+    }
+
+
+    .c-article-item__content h4 a:hover {
+
+      color: #2563eb;
+
+    }
+
+
+    .c-article-item__content p {
+
+      font-size: 0.875rem;
+
+      color: #4a5568;
+
+    }
+
+
+    /* Component: Sidebar (c-sidebar) */
+
+    .c-sidebar {
+
+      flex-shrink: 0;
+
+    }
+
+
+    .c-sidebar__content {
+
+      background-color: #ffffff;
+
+      padding: 1.5rem;
+
+      border-radius: 0.75rem;
+
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      position: sticky;
+
+      top: 6rem;
+
+      max-height: calc(100vh - 7.5rem);
+
+      overflow-y: auto;
+
+    }
+
+
+    /* Custom scrollbar for the sidebar */
+
+    .c-sidebar__content::-webkit-scrollbar {
+
+      width: 8px;
+
+    }
+
+    .c-sidebar__content::-webkit-scrollbar-track {
+
+      background: #e0e0e0;
+
+      border-radius: 10px;
+
+    }
+
+    .c-sidebar__content::-webkit-scrollbar-thumb {
+
+      background: #a0a0a0;
+
+      border-radius: 10px;
+
+    }
+
+    .c-sidebar__content::-webkit-scrollbar-thumb:hover {
+
+      background: #808080;
+
+    }
+
+
+    .c-sidebar__title {
+
+      font-size: 1.5rem;
+
+      font-weight: 700;
+
+      color: #1a202c;
+
+      margin-bottom: 1rem;
+
+      padding-bottom: 0.5rem;
+
+      border-bottom: 1px solid #e2e8f0;
+
+    }
+
+
+    .c-sidebar__list {
+
+      list-style: none;
+
+      padding: 0;
+
+      margin: 0;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 1rem;
+
+    }
+
+
+    .c-sidebar__list-item a {
+
+      display: block;
+
+      padding: 0.5rem;
+
+      border-radius: 0.375rem;
+
+      transition: background-color 0.2s ease-in-out;
+
+    }
+
+
+    .c-sidebar__list-item a:hover {
+
+      background-color: #f7f7f7;
+
+    }
+
+
+    .c-sidebar__list-item h4 {
+
+      font-size: 1.125rem;
+
+      font-weight: 600;
+
+      color: #2d3748;
+
+      line-height: 1.375;
+
+    }
+
+
+    .c-sidebar__list-item p {
+
+      font-size: 0.875rem;
+
+      color: #4a5568;
+
+    }
+
+
+    /* Component: Footer (c-footer) */
+
+    .c-footer {
+
+      background-color: #2d3748;
+
+      color: #ffffff;
+
+      padding: 2rem 0;
+
+      margin-top: 3rem;
+
+    }
+
+
+    .c-footer>.l-container {
+
+      text-align: center;
+
+      font-size: 0.875rem;
+
+    }
+
+
+    .c-footer__links {
+
+      margin-top: 1rem;
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 1rem;
+
+    }
+
+
+    .c-footer__link {
+
+      color: #ffffff;
+
+      transition: color 0.2s ease-in-out;
+
+    }
+
+
+    .c-footer__link:hover {
+
+      color: #93c5fd;
+
+    }
+
+
+    .c-footer__links span {
+
+      color: #a0aec0;
+
+    }
+
+
+    /* Responsive Adjustments (Media Queries) */
+
+    @media (min-width: 768px) {
+
+      .l-container {
+
+        padding: 1rem 2rem;
+
+      }
+
+
+      .c-main-nav__links {
+
+        display: flex;
+
+      }
+
+
+      .c-mobile-menu-button {
+
+        display: none;
+
+      }
+
+
+      .c-category-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    @media (min-width: 1024px) {
+
+      .l-main-content>.l-container {
+
+        flex-direction: row;
+
+      }
+
+
+      .l-main-content__left {
+
+        width: 75%;
+
+      }
+
+
+      .l-main-content__right {
+
+        width: 25%;
+
+      }
+
+    }
+  </style>
+
+</head>
+
+<body class="antialiased">
+
+  <nav class="c-main-nav">
+
+    <div class="l-container">
+
+      <a href="#" class="c-main-nav__logo">Your News Daily</a>
+
+
+      <div class="c-main-nav__links">
+
+        <a href="#" class="c-main-nav__link">Home</a>
+
+        <a href="#" class="c-main-nav__link">Politics</a>
+
+        <a href="#" class="c-main-nav__link">Business</a>
+
+        <a href="#" class="c-main-nav__link">Technology</a>
+
+        <a href="#" class="c-main-nav__link">World</a>
+
+        <a href="#" class="c-main-nav__link">Sports</a>
+
+      </div>
+
+
+      <div class="c-mobile-menu-button">
+
+        <button aria-label="Toggle mobile menu">
+
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
+
+          </svg>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <main class="l-main-content">
+
+    <div class="l-container">
+
+      <div class="l-main-content__left">
+
+        <section class="c-hero-banner">
+
+          <h2 class="c-hero-banner__title">
+
+            <a href="#">
+
+              Global Leaders Convene for Landmark Climate Summit Amidst Rising Tensions
+
+            </a>
+
+          </h2>
+
+          <img src="https://placehold.co/1200x500/A7D9F5/000000?text=Top+Story+Image" alt="Global Summit"
+            class="c-hero-banner__image">
+
+          <p class="c-hero-banner__description">
+
+            Delegates from over 150 nations have gathered in Geneva to address the urgent challenges of climate change,
+            with discussions focusing on new emission reduction targets and international cooperation. Experts warn that
+            decisive action is needed now more than ever.
+
+          </p>
+
+          <a href="#" class="c-hero-banner__read-more">Read More &rarr;</a>
+
+        </section>
+
+
+        <section class="c-category-grid">
+
+          <div class="c-category-block">
+
+            <h3 class="c-category-block__title">
+
+              <a href="#">Politics</a>
+
+            </h3>
+
+            <article class="c-article-item">
+
+              <img src="https://placehold.co/100x70/D1E7DD/000000?text=Pol" alt="Political News"
+                class="c-article-item__image">
+
+              <div class="c-article-item__content">
+
+                <h4>
+
+                  <a href="#">New Bill Aims to Reform Healthcare System</a>
+
+                </h4>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+              </div>
+
+            </article>
+
+            <article class="c-article-item">
+
+              <img src="https://placehold.co/100x70/D1E7DD/000000?text=Gov" alt="Government News"
+                class="c-article-item__image">
+
+              <div class="c-article-item__content">
+
+                <h4>
+
+                  <a href="#">Election Season Heats Up Across States</a>
+
+                </h4>
+
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+              </div>
+
+            </article>
+
+            <a href="#" class="c-category-block__more">More Politics &rarr;</a>
+
+          </div>
+
+
+          <div class="c-category-block">
+
+            <h3 class="c-category-block__title">
+
+              <a href="#">Business</a>
+
+            </h3>
+
+            <article class="c-article-item">
+
+              <img src="https://placehold.co/100x70/F8D7DA/000000?text=Biz" alt="Business News"
+                class="c-article-item__image">
+
+              <div class="c-article-item__content">
+
+                <h4>
+
+                  <a href="#">Tech Giant Reports Record Quarterly Earnings</a>
+
+                </h4>
+
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+
+              </div>
+
+            </article>
+
+            <article class="c-article-item">
+
+              <img src="https://placehold.co/100x70/F8D7DA/000000?text=Mkt" alt="Market News"
+                class="c-article-item__image">
+
+              <div class="c-article-item__content">
+
+                <h4>
+
+                  <a href="#">Global Markets React to Interest Rate Hike</a>
+
+                </h4>
+
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+
+              </div>
+
+            </article>
+
+            <a href="#" class="c-category-block__more">More Business &rarr;</a>
+
+          </div>
+
+
+          <div class="c-category-block">
+
+            <h3 class="c-category-block__title">
+
+              <a href="#">Technology</a>
+
+            </h3>
+
+            <article class="c-article-item">
+
+              <img src="https://placehold.co/100x70/CCE5FF/000000?text=Tech" alt="Tech News"
+                class="c-article-item__image">
+
+              <div class="c-article-item__content">
+
+                <h4>
+
+                  <a href="#">AI Breakthroughs Revolutionize Data Analysis</a>
+
+                </h4>
+
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+
+              </div>
+
+            </article>
+
+            <article class="c-article-item">
+
+              <img src="https://placehold.co/100x70/CCE5FF/000000?text=Gadget" alt="Gadget News"
+                class="c-article-item__image">
+
+              <div class="c-article-item__content">
+
+                <h4>
+
+                  <a href="#">New Smartphone Features Unveiled at Expo</a>
+
+                </h4>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+              </div>
+
+            </article>
+
+            <a href="#" class="c-category-block__more">More Technology &rarr;</a>
+
+          </div>
+
+
+          <div class="c-category-block">
+
+            <h3 class="c-category-block__title">
+
+              <a href="#">World</a>
+
+            </h3>
+
+            <article class="c-article-item">
+
+              <img src="https://placehold.co/100x70/D4EDDA/000000?text=World" alt="World News"
+                class="c-article-item__image">
+
+              <div class="c-article-item__content">
+
+                <h4>
+
+                  <a href="#">Humanitarian Crisis Deepens in Conflict Zone</a>
+
+                </h4>
+
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+
+              </div>
+
+            </article>
+
+            <article class="c-article-item">
+
+              <img src="https://placehold.co/100x70/D4EDDA/000000?text=Diplomacy" alt="Diplomacy News"
+                class="c-article-item__image">
+
+              <div class="c-article-item__content">
+
+                <h4>
+
+                  <a href="#">New Diplomatic Efforts to Resolve Regional Disputes</a>
+
+                </h4>
+
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+
+              </div>
+
+            </article>
+
+            <a href="#" class="c-category-block__more">More World &rarr;</a>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+      <aside class="c-sidebar">
+
+        <div class="c-sidebar__content">
+
+          <h3 class="c-sidebar__title">Popular Articles</h3>
+
+          <ul class="c-sidebar__list">
+
+            <li class="c-sidebar__list-item">
+
+              <a href="#">
+
+                <h4>1. The Future of Renewable Energy</h4>
+
+                <p>A deep dive into the latest advancements.</p>
+
+              </a>
+
+            </li>
+
+            <li class="c-sidebar__list-item">
+
+              <a href="#">
+
+                <h4>2. Understanding Global Economic Shifts</h4>
+
+                <p>What the recent market trends mean for you.</p>
+
+              </a>
+
+            </li>
+
+            <li class="c-sidebar__list-item">
+
+              <a href="#">
+
+                <h4>3. The Impact of AI on Everyday Life</h4>
+
+                <p>From smart homes to autonomous vehicles.</p>
+
+              </a>
+
+            </li>
+
+            <li class="c-sidebar__list-item">
+
+              <a href="#">
+
+                <h4>4. Exploring Ancient Civilizations</h4>
+
+                <p>New discoveries shed light on forgotten cultures.</p>
+
+              </a>
+
+            </li>
+
+            <li class="c-sidebar__list-item">
+
+              <a href="#">
+
+                <h4>5. Healthy Living: Tips for a Balanced Diet</h4>
+
+                <p>Expert advice for a healthier lifestyle.</p>
+
+              </a>
+
+            </li>
+
+            <li class="c-sidebar__list-item">
+
+              <a href="#">
+
+                <h4>6. The Rise of Remote Work: A New Era?</h4>
+
+                <p>How companies are adapting to distributed teams.</p>
+
+              </a>
+
+            </li>
+
+            <li class="c-sidebar__list-item">
+
+              <a href="#">
+
+                <h4>7. Space Exploration: Beyond Our Solar System</h4>
+
+                <p>Upcoming missions and groundbreaking research.</p>
+
+              </a>
+
+            </li>
+
+            <li class="c-sidebar__list-item">
+
+              <a href="#">
+
+                <h4>8. The Art of Storytelling in the Digital Age</h4>
+
+                <p>Crafting compelling narratives for online audiences.</p>
+
+              </a>
+
+            </li>
+
+            <li class="c-sidebar__list-item">
+
+              <a href="#">
+
+                <h4>9. Sustainable Fashion: Trends and Challenges</h4>
+
+                <p>Making eco-conscious choices in your wardrobe.</p>
+
+              </a>
+
+            </li>
+
+            <li class="c-sidebar__list-item">
+
+              <a href="#">
+
+                <h4>10. Cybersecurity: Protecting Your Digital Footprint</h4>
+
+                <p>Essential tips for online safety.</p>
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+
+  <footer class="c-footer">
+
+    <div class="l-container">
+
+      <p>&copy; 2023 Your News Daily. All rights reserved.</p>
+
+      <div class="c-footer__links">
+
+        <a href="#" class="c-footer__link">About Us</a>
+
+        <span>|</span>
+
+        <a href="#" class="c-footer__link">Contact</a>
+
+        <span>|</span>
+
+        <a href="#" class="c-footer__link">Privacy Policy</a>
+
+        <span>|</span>
+
+        <a href="#" class="c-footer__link">Terms of Service</a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
