@@ -1,0 +1,152 @@
+.profile-card {
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f1f1f1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.feature-list {
+  display: grid;
+  gap: 10px;
+}
+
+.feature-list li {
+  padding: 15px;
+  width: 90%;
+  list-style: none;
+  background: #f1f1f1;
+}
+
+.cta {
+  text-align: center;
+}
+
+.cta-button {
+  font-size: 20px;
+  padding: 20px 40px;
+  background: #ff5733;
+  color: white;
+  border: none;
+}
+
+.testimonial {
+  margin: 0 auto;
+  padding: 20px;
+  background: #e6e6e6;
+  text-align: center;
+}
+
+.layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: lightblue;
+}
+
+main {
+  padding: 20px;
+}
+
+.pricing {
+  display: flex;
+  gap: 15px;
+}
+
+.price-card {
+  flex: 1;
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+}
+
+.form input,
+.form button {
+  padding: 10px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .cta-button {
+    font-size: 10px;
+    padding: 10px 20px;
+  }
+  .pricing,
+  .form {
+    flex-direction: column;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .gallery img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .profile-card {
+    width: 90%;
+    padding: 15px;
+  }
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+  .feature-list li {
+    list-style: lower-roman;
+  }
+  .cta-button {
+    font-size: 14px;
+    padding: 15px 30px;
+  }
+  .pricing,
+  .form {
+    flex-direction: column;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .gallery img {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .feature-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feature-list li {
+    list-style: lower-greek;
+  }
+  .testimonial {
+    width: 80%;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1025px) {
+  .feature-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .feature-list li {
+    list-style: decimal-leading-zero;
+  }
+  .testimonial {
+    width: 600px;
+  }
+}/*# sourceMappingURL=style.css.map */
