@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 03</title>
+    <style>
+      .menu {
+        display: flex;
+        gap: 15px;
+        padding: 15px;
+        background-color: lightcoral;
+      }
+      .menu a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px;
+        border: 1px solid white;
+        border-radius: 5px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .menu {
+          flex-direction: column;
+          align-items: center;
+        }
+        .menu a {
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </body>
+</html>

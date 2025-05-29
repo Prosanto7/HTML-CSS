@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 06</title>
+    <style>
+      .hero {
+        background: url("media/banner.jpg") no-repeat center/cover;
+        height: 500px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+      }
+
+      .hero-text {
+        font-weight: bold;
+        color: orange;
+        margin-left: 12px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .hero {
+          font-size: 2rem;
+          height: 200px;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero"><span>Welcome to</span><span class="hero-text">Our Site</span></section>
+  </body>
+</html>
