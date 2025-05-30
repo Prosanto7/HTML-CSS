@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      #sidebar {
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+      }
+      #sidebar.show {
+        transform: translateX(0);
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="bg-dark text-white p-3 d-flex justify-content-between align-items-center"
+    >
+      <div class="fs-4 fw-bold">Prosanto7</div>
+      <div id="hamburger" class="d-md-none fs-2" role="button">☰</div>
+      <nav id="navbar" class="d-none d-md-flex gap-3">
+        <a href="#" class="text-white text-decoration-none">Home</a>
+        <a href="#about" class="text-white text-decoration-none">About Us</a>
+        <a href="#" class="text-white text-decoration-none">Categories</a>
+        <a href="#projects" class="text-white text-decoration-none">Projects</a>
+        <a href="#" class="text-white text-decoration-none">Services</a>
+        <a href="#contact" class="text-white text-decoration-none">Contract</a>
+      </nav>
+    </header>
+
+    <div
+      id="sidebar"
+      class="position-fixed top-0 end-0 h-100 bg-white w-75 shadow"
+    >
+      <div
+        class="p-3 border-bottom d-flex justify-content-between align-items-center"
+      >
+        <h2 class="fs-5 fw-bold">Menu</h2>
+        <button id="closebar" class="btn btn-sm">&times;</button>
+      </div>
+      <nav class="d-flex flex-column p-3 gap-3">
+        <a href="#" class="text-decoration-none text-dark">Home</a>
+        <a href="#about" class="text-decoration-none text-dark">About Us</a>
+        <a href="#" class="text-decoration-none text-dark">Categories</a>
+        <a href="#projects" class="text-decoration-none text-dark">Projects</a>
+        <a href="#" class="text-decoration-none text-dark">Services</a>
+        <a href="#contact" class="text-decoration-none text-dark">Contract</a>
+      </nav>
+    </div>
+
+    <section
+      class="d-flex flex-column justify-content-center align-items-center p-5"
+      style="background: linear-gradient(to right, #bae6fd, #fecaca)"
+    >
+      <div
+        class="d-flex flex-column flex-sm-row align-items-center justify-content-center text-dark fs-3 fw-bold mb-4"
+      >
+        <p class="mb-0">Hello!</p>
+        <p class="ms-sm-3 mb-0">This is Prosanto7</p>
+      </div>
+      <button class="btn btn-primary fw-bold px-4 py-2">
+        Let's Get Started
+      </button>
+    </section>
+
+    <section id="about" class="py-5 px-3">
+      <h2 class="text-center fs-2 fw-semibold mb-4">About Us</h2>
+      <p class="mx-auto text-center text-muted" style="max-width: 720px">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
+        voluptate temporibus obcaecati autem quibusdam, eos ipsam officia
+        provident saepe impedit tenetur accusamus alias sunt. Aliquam corporis
+        consequuntur fuga, necessitatibus adipisci doloremque cupiditate facilis
+        illum eligendi distinctio, veniam officiis quo, quaerat sed esse quis!
+        Neque recusandae obcaecati ducimus quasi, quam soluta!
+      </p>
+      <p class="mx-auto text-center text-muted mt-3" style="max-width: 720px">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam omnis ea
+        cumque minus rerum recusandae ab cupiditate? Quae commodi consequatur
+        cupiditate ea tempora accusantium, officiis qui rem, nostrum ipsum
+        beatae iste praesentium esse corporis necessitatibus dignissimos
+        assumenda accusamus consequuntur, distinctio impedit laudantium.
+        Consequatur, esse pariatur commodi architecto doloremque aperiam atque
+        iste eum aspernatur ut quia, explicabo nihil reiciendis. Eum cupiditate
+        ipsam consectetur maxime. Vero velit, nesciunt nemo possimus, soluta
+        explicabo ducimus eos a asperiores recusandae voluptatum ea fuga labore
+        hic eaque saepe, ut perferendis. Impedit fugit odit dolorum, sapiente ut
+        sunt omnis odio non voluptas, error magnam sint minus recusandae.
+      </p>
+    </section>
+
+    <section id="projects" class="bg-light py-5 px-3">
+      <h2 class="text-center fs-2 fw-semibold mb-4">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <h3 class="fs-5 fw-semibold mb-3">Project 1</h3>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <h3 class="fs-5 fw-semibold mb-3">Project 2</h3>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <h3 class="fs-5 fw-semibold mb-3">Project 3</h3>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <h3 class="fs-5 fw-semibold mb-3">Project 4</h3>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <h3 class="fs-5 fw-semibold mb-3">Project 5</h3>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <h3 class="fs-5 fw-semibold mb-3">Project 6</h3>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5 px-3">
+      <h2 class="text-center fs-2 fw-semibold mb-4">Contact Us</h2>
+      <form
+        class="mx-auto bg-light p-4 rounded shadow"
+        style="max-width: 600px"
+      >
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea
+            class="form-control"
+            id="message"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">
+          Send Message
+        </button>
+      </form>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+      <div class="mb-3">
+        <a href="#" class="text-white mx-2"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fa fa-twitter"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2023 Prosanto7. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const sidebar = document.getElementById("sidebar");
+      const closebar = document.getElementById("closebar");
+
+      hamburger.addEventListener("click", () => {
+        sidebar.classList.add("show");
+      });
+
+      closebar.addEventListener("click", () => {
+        sidebar.classList.remove("show");
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
