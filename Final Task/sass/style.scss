@@ -1,0 +1,72 @@
+@mixin bg-position($top, $right, $z-index) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  z-index: $z-index;
+}
+
+body {
+  font-family: "Azo Sans Test";
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+
+    .left {
+      display: flex;
+      gap: 10px;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}
+
+.background-layer {
+  .layer-one {
+    @include bg-position(70px, 200px, 9);
+  }
+
+  .layer-two {
+    @include bg-position(80px, -180px, 8);
+  }
+
+  .layer-three {
+    @include bg-position(0, 0, 7);
+  }
+
+  .layer-four {
+    @include bg-position(0, 0, 6);
+  }
+
+  .layer-five {
+    @include bg-position(0, 0, 5);
+  }
+
+  .layer-six {
+    @include bg-position(0, 0, 4);
+  }
+}

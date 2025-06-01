@@ -1,0 +1,72 @@
+body {
+  font-family: "Azo Sans Test";
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+}
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+header div .left {
+  display: flex;
+  gap: 10px;
+}
+header div .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.background-layer .layer-one {
+  position: absolute;
+  top: 70px;
+  right: 200px;
+  z-index: 9;
+}
+.background-layer .layer-two {
+  position: absolute;
+  top: 80px;
+  right: -180px;
+  z-index: 8;
+}
+.background-layer .layer-three {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 7;
+}
+.background-layer .layer-four {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 6;
+}
+.background-layer .layer-five {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+.background-layer .layer-six {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+}/*# sourceMappingURL=style.css.map */
