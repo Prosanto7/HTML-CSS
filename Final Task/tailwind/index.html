@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,10 +13,10 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <header>
-      <a href=""><img src="../media/logo.svg" alt="Logo" /></a>
-      <div>
+  <body class="font-poppins m-0 p-0">
+    <header class="flex justify-between items-center p-8 w-full text-sm font-bold">
+      <a href=""><img class="w-4/5" src="../media/logo.svg" alt="Logo" /></a>
+      <div class="flex justify-between items-center gap-12">
         <nav class="left">
           <a href="">OUR TEAM</a>
           <a href="">TOKENS</a>
